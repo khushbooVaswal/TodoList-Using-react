@@ -35,7 +35,7 @@ function App() {
   settodos([...todos , {id : uuidv4(), todo , isCompleted : false}])
   settodo("")
  
-//  savetoLS()
+ savetoLS()
  }
 
  const handleChange = (e) => {
@@ -53,7 +53,7 @@ function App() {
   let newTodos = [...todos]
   newTodos[index].isCompleted = !newTodos[index].isCompleted
   settodos(newTodos)
-  // savetoLS()
+  savetoLS()
  }
  
  const handleDelete = (e,id) => {
@@ -64,7 +64,7 @@ function App() {
      })
      settodos(newTodos)
     }
-    //  savetoLS()
+     savetoLS()
   }
 
   const handleEdit = (e,id) => {
@@ -76,7 +76,7 @@ function App() {
       return item.id != id
     })
     settodos(newTodos)
-    // savetoLS()
+    savetoLS()
   }
   
   const toggleFinished = (e) => {
